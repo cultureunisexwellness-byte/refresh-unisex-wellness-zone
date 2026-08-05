@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Serene Spa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#">Serene Spa</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#booking">Booking</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-inner container">
+        <h1>Relax. Rebalance. Renew.</h1>
+        <p>Experience personalized wellness and timeless tranquility at Serene Spa.</p>
+        <a class="btn" href="#booking">Book Now</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="container about">
+      <h2>About Serene Spa</h2>
+      <p>At Serene Spa we blend ancient therapies and modern wellness techniques to help you relax, restore, and rejuvenate. Our experienced therapists personalize every session to your needs.</p>
+    </section>
+
+    <section id="services" class="container services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <article class="card">
+          <h3>Swedish Massage</h3>
+          <p>Classic full-body massage to ease tension and improve circulation.</p>
+          <span class="price">60 min</span>
+        </article>
+        <article class="card">
+          <h3>Hot Stone Therapy</h3>
+          <p>Warm stones soothe sore muscles and melt away stress.</p>
+          <span class="price">75 min</span>
+        </article>
+        <article class="card">
+          <h3>Facial & Glow</h3>
+          <p>Deep cleansing and hydrating facial tailored to your skin type.</p>
+          <span class="price">50 min</span>
+        </article>
+        <article class="card">
+          <h3>Couples Retreat</h3>
+          <p>Shared relaxation experience with side-by-side treatments.</p>
+          <span class="price">90 min</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1556228452-3f3f3a69d647?q=80&w=800&auto=format&fit=crop" alt="Spa interior">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Stones and candles">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop" alt="Massage table">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Relaxing feet soak">
+      </div>
+    </section>
+
+    <section id="testimonials" class="container testimonials">
+      <h2>What Clients Say</h2>
+      <div class="test-grid">
+        <blockquote>
+          "A beautiful, calming experience — the staff truly listened to my needs." <cite>— Maya R.</cite>
+        </blockquote>
+        <blockquote>
+          "Best facial I've had. My skin glowed for days!" <cite>— David L.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="booking" class="container booking">
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm" class="form">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Swedish Massage — 60 min</option>
+            <option>Hot Stone Therapy — 75 min</option>
+            <option>Facial & Glow — 50 min</option>
+            <option>Couples Retreat — 90 min</option>
+          </select>
+        </div>
+
+        <div class="form-row grid-2">
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input id="time" name="time" type="time" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn">Request Booking</button>
+        </div>
+
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Serene Spa</h3>
+        <p>123 Tranquil Lane<br/>Your City, ST 00000<br/>Phone: (555) 123-4567</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Sun: 9:00am – 8:00pm</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="#" aria-label="Instagram">Instagram</a> · <a href="#" aria-label="Facebook">Facebook</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; <span id="year"></span> Serene Spa — All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
